@@ -13,7 +13,7 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-echo [2/4] Khởi tạo Git repository...
+echo [2/4] Kiểm tra Git repository...
 if not exist .git (
     git init
     echo Repository đã được khởi tạo
@@ -37,7 +37,9 @@ if "%repo_url%"=="" (
 
 git remote add origin %repo_url% 2>nul
 git remote set-url origin %repo_url% 2>nul
-git push -u origin main
+
+echo Đang push với branch master...
+git push -u origin master
 
 :end
 echo.
@@ -49,7 +51,7 @@ echo Để kích hoạt GitHub Pages:
 echo 1. Vào repository trên GitHub
 echo 2. Settings > Pages
 echo 3. Source: Deploy from a branch
-echo 4. Branch: main, Folder: / (root)
+echo 4. Branch: master, Folder: / (root)
 echo 5. Save
 echo.
 echo Website sẽ có tại: https://username.github.io/repository-name
