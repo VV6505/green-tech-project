@@ -593,6 +593,26 @@
             .stat-unit { font-size: 20px; }
             .progress-text { font-size: 14px; }
         }
+
+        @media (max-width: 1200px) {
+            .header { height: 60px; padding: 10px 20px; }
+            .sidebar { width: 220px; top: 60px; }
+            .main-content { margin-left: 220px; margin-top: 60px; padding: 20px; }
+            .page-title { font-size: 22px; }
+            .section-title { font-size: 16px; }
+            .nav-item { padding: 8px 20px; font-size: 15px; }
+            .project-item { padding: 14px; }
+            .project-name { font-size: 15px; }
+            .project-status { font-size: 13px; }
+            .project-image { width: 70px; }
+            .stat-card { padding: 18px; }
+            .stat-value, .stat-main-value { font-size: 28px; }
+            .stat-unit { font-size: 18px; }
+            .progress-text { font-size: 13px; }
+            .stats-grid { gap: 16px; }
+            .content-grid { gap: 24px; }
+        }
+
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -605,15 +625,47 @@
 
             .main-content {
                 margin-left: 0;
+                padding: 16px;
             }
 
             .content-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .stats-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
             }
+
+            .header { height: 56px; padding: 8px 16px; }
+            .page-title { font-size: 20px; }
+            .section-title { font-size: 15px; }
+            .project-item { padding: 12px; }
+            .project-name { font-size: 14px; }
+            .project-status { font-size: 12px; }
+            .project-image { width: 60px; }
+            .stat-card { padding: 16px; }
+            .stat-value, .stat-main-value { font-size: 24px; }
+            .stat-unit { font-size: 16px; }
+            .progress-text { font-size: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .header { height: 52px; padding: 6px 12px; }
+            .main-content { padding: 12px; }
+            .page-title { font-size: 18px; }
+            .section-title { font-size: 14px; }
+            .project-item { padding: 10px; }
+            .project-name { font-size: 13px; }
+            .project-status { font-size: 11px; }
+            .project-image { width: 50px; }
+            .stat-card { padding: 14px; }
+            .stat-value, .stat-main-value { font-size: 20px; }
+            .stat-unit { font-size: 14px; }
+            .progress-text { font-size: 11px; }
+            .stats-grid { gap: 12px; }
+            .content-grid { gap: 16px; }
         }
     </style>
 </head>
@@ -899,7 +951,7 @@
                     case '🏠':
                         console.log("Mở trang chủ trong tab mới...");
                         setTimeout(() => {
-                            window.open('trangchu.html', '_blank', 'noopener');
+                            window.open('index.html', '_blank', 'noopener');
                         }, 300);
                         break;
                     case '📁':
@@ -1275,7 +1327,7 @@
                 localStorage.removeItem('gt_logged_in');
                 localStorage.removeItem('gt_last_login');
             } catch (e) {}
-            window.location.href = 'trangchu.html';
+            window.location.href = 'index.html';
         }
 
         // Show yearly report function

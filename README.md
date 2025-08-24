@@ -6,7 +6,7 @@
 
 1. **Tạo repository trên GitHub:**
    - Vào [github.com](https://github.com) và tạo repository mới
-   - Đặt tên: `green-tech-project`
+   - Đặt tên: `image.png
    - Chọn Public
 
 2. **Upload code lên GitHub:**
