@@ -410,6 +410,22 @@
             transform: translateY(-1px);
         }
 
+        /* Loading spinner */
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         /* Social login */
         .divider {
             text-align: center;
@@ -856,7 +872,7 @@
                     localStorage.setItem('gt_user', JSON.stringify({ email: user.email, role: user.role, name: user.name, lastLogin: nowIso }));
                     localStorage.setItem('gt_last_login', nowIso);
                     setTimeout(() => {
-                        // luôn quay về index trước, sau đó người dùng bấm Dự Án
+                        // Chuyển về trang chủ index.html
                         window.location.href = 'index.html';
                     }, 1200);
                 } else {
@@ -883,7 +899,7 @@
             setTimeout(() => {
                 showSuccess(`Login ${providerNames[provider]} Successfully!`);
                 setTimeout(() => {
-                    window.location.href = 'duan.html';
+                    window.location.href = 'index.html';
                 }, 1500);
             }, 2000);
         }
